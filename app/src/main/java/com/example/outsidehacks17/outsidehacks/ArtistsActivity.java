@@ -14,12 +14,17 @@ import android.widget.ArrayAdapter;
 
 public class ArtistsActivity extends AppCompatActivity {
 
+    private UserFactory users;
+    private int currentUser;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_artists);
 
 ///TODOO get users
+        users = this.getIntent().getParcelableExtra("UserFactory");
+        currentUser = this.getIntent().getParcelableExtra("id");
 
 
 
@@ -48,32 +53,21 @@ public class ArtistsActivity extends AppCompatActivity {
     };
 
     public void buttonContinue(View theView) {
-        Intent intent = new Intent(this, ChooseEventsActivity.class);
         AutoCompleteTextView textView1 = (AutoCompleteTextView) findViewById(R.id.artist1);
         AutoCompleteTextView textview2 = (AutoCompleteTextView) findViewById(R.id.artist2);
         AutoCompleteTextView textView3 = (AutoCompleteTextView) findViewById(R.id.artist3);
 
-        String a1 = textView1.getText().toString();
-        String a2 = textview2.getText().toString();
-        String a3 = textView3.getText().toString();
 
-        String chosenArtists[3];
-        chosenArtists[0] = a1;
-        chosenArtists[1] = a2;
-        chosenArtists[2] = a3;
+        users.get(currentUser).setFavArtists1(textView1.getText().toString());
+        users.get(currentUser).setFavArtists2(textview2.getText().toString());
+        users.get(currentUser).setFavArtists3(textView3.getText().toString());
 
-        //if (field.isEmpty())
-
-
-      //  intent.putExtra(field);
-        startActivity(intent);
 
 
         Intent i = new Intent();
-        Bundle b = new Bundle();
-        b.putParcelable(Constants.CUSTOM_LISTING, currentListing);
-        i.putExtras(b);
-        i.setClass(this, ChooseEventa.class);
+        i.setClass(this, ChooseEventsActivity.class);
+        i.putExtra("UserFactory", users);
+        i.putExtra("id", currentUser);
         startActivity(i);
     }
 
