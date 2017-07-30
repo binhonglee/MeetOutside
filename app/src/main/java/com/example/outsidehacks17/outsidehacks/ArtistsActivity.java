@@ -64,11 +64,11 @@ public class ArtistsActivity extends AppCompatActivity {
 
 
 
-        Intent i = new Intent();
-        i.setClass(this, ChooseEventsActivity.class);
+        Intent i = new Intent(this, ChooseEventsActivity.class);
         i.putExtra("UserFactory", users);
         i.putExtra("id", currentUser);
         startActivity(i);
+        finish();
     }
 
 }
