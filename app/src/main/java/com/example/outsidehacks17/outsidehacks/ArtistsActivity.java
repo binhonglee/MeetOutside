@@ -10,6 +10,7 @@ import android.view.View;
 import android.widget.AutoCompleteTextView;
 import android.widget.EditText;
 import android.widget.ArrayAdapter;
+import android.view.MotionEvent;
 
 
 public class ArtistsActivity extends AppCompatActivity {
@@ -25,15 +26,46 @@ public class ArtistsActivity extends AppCompatActivity {
         users = this.getIntent().getParcelableExtra("UserFactory");
         currentUser = this.getIntent().getIntExtra("id", 0);
 
-        AutoCompleteTextView textView1 = (AutoCompleteTextView) findViewById(R.id.artist1);
-        AutoCompleteTextView textview2 = (AutoCompleteTextView) findViewById(R.id.artist2);
-        AutoCompleteTextView textView3 = (AutoCompleteTextView) findViewById(R.id.artist3);
+        final AutoCompleteTextView textView1 = (AutoCompleteTextView) findViewById(R.id.artist1);
+        final AutoCompleteTextView textview2 = (AutoCompleteTextView) findViewById(R.id.artist2);
+        final AutoCompleteTextView textView3 = (AutoCompleteTextView) findViewById(R.id.artist3);
 
         ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, ARTISTNAMES);
         textView1.setAdapter(adapter);
         textview2.setAdapter(adapter);
         textView3.setAdapter(adapter);
+
+        textView1.setOnTouchListener(new View.OnTouchListener(){
+            @Override
+            public boolean onTouch(View v, MotionEvent event){
+                textView1.showDropDown();
+                return false;
+            }
+        });
+
+        textview2.setOnTouchListener(new View.OnTouchListener(){
+            @Override
+            public boolean onTouch(View v, MotionEvent event){
+                textview2.showDropDown();
+                return false;
+            }
+        });
+
+        textView3.setOnTouchListener(new View.OnTouchListener(){
+            @Override
+            public boolean onTouch(View v, MotionEvent event){
+                textView3.showDropDown();
+                return false;
+            }
+        });
+
+      //  textView1.showDropDown();
+      //  textview2.showDropDown();
+       // textView3.showDropDown();
+
     }
+
+
 
     private static final String[] ARTISTNAMES = new String[] {
             "Metallica", "The Who", "Gorillaz", "Lorde", "A Tribe Called Quest", "alt-J", "Queens Of The Stone Age", "Above & Beyond", "Fleet Foxes", "Empire Of The Sun", "The Avett Brothers",
