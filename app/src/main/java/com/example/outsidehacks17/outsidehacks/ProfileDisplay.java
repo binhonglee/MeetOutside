@@ -81,7 +81,7 @@ public class ProfileDisplay extends AppCompatActivity implements LoadImageTask.L
 
         users = this.getIntent().getParcelableExtra("UserFactory");
         currentUser = this.getIntent().getIntExtra("id", users.size() - 1);
-        int toShow = this.getIntent().getIntExtra("othersId", currentUser);
+        final int toShow = this.getIntent().getIntExtra("othersId", currentUser);
 
         setContentView(R.layout.activity_profile_display);
 
@@ -139,7 +139,9 @@ public class ProfileDisplay extends AppCompatActivity implements LoadImageTask.L
                 @Override
                 public void onClick(View view) {
                     toReturn = true;
-                    //triggered(matches);
+                    Intent matched = new Intent(ProfileDisplay.this, MatchedProfiles.class);
+                    matched.putExtra("Email", users.get(toShow).getEmail());
+                    startActivity(matched);
                 }
             });
 
