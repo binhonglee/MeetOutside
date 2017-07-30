@@ -10,6 +10,9 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        startActivity(new Intent(MainActivity.this, LoginScreen.class));
+        Intent loginScreen = new Intent(MainActivity.this, LoginScreen.class);
+        loginScreen.putExtra("UserFactory", new UserFactory());
+        startActivity(loginScreen);
+        finish();
     }
 }

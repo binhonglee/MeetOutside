@@ -8,7 +8,7 @@ import android.widget.CheckBox;
 import java.util.ArrayList;
 
 public class ChooseEventsActivity extends AppCompatActivity {
-    ArrayList<String> selection = new ArrayList<String>();
+    ArrayList<String> selection = new ArrayList<>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
