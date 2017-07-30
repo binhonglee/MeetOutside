@@ -13,7 +13,7 @@ public class ChooseEventsActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.ChooseEventsActivity);
+        setContentView(R.layout.activity_choose_events);
     }
 
     public void selectItem (View view) {

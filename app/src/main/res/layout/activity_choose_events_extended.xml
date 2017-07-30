@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
     tools:context="com.example.outsidehacks17.outsidehacks.ChooseEventsActivity"
-    tools:showIn="@layout/ChooseEventsActivity">
+    tools:showIn="@layout/activity_choose_events">
 
     <TextView
         android:id="@+id/whatEvents"

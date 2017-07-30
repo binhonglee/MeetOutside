@@ -20,7 +20,7 @@
 
     </android.support.design.widget.AppBarLayout>
 
-    <include layout="@layout/Choose_Events_Activity" />
+    <include layout="@layout/activity_choose_events_extended" />
 
     <android.support.design.widget.FloatingActionButton
         android:id="@+id/fab"
