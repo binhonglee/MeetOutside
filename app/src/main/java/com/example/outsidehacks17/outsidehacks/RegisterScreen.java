@@ -24,6 +24,7 @@ public class RegisterScreen extends AppCompatActivity {
 
         final Button bRegister = (Button) findViewById(R.id.bRegister);
 
+
         bRegister.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
