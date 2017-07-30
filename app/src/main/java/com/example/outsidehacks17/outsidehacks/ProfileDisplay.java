@@ -1,8 +1,6 @@
 package com.example.outsidehacks17.outsidehacks;
 
-import android.content.Intent;
 import android.os.Bundle;
-import android.provider.ContactsContract;
 import android.support.annotation.NonNull;
 import android.support.design.widget.BottomNavigationView;
 import android.support.v7.app.AppCompatActivity;
@@ -79,14 +77,6 @@ public class ProfileDisplay extends AppCompatActivity implements LoadImageTask.L
         email = (TextView) findViewById(R.id.email);
         email.setText("Email: " + users.get(toShow).getEmail());
         mImageView = (ImageView) findViewById(R.id.image);
-
-        editBtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent registerIntent = new Intent(ProfileDisplay.this, EditProfile.class);
-                registerIntent.putExtra("UserFactory", users);
-                startActivity(registerIntent);
-                finish();
 
         if (toShow == currentUser) {
             yesBtn = (Button) findViewById(R.id.yesBtn);
