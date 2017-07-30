@@ -4,7 +4,7 @@ import android.os.Parcel
 import android.os.Parcelable
 import java.util.ArrayList
 
-class UserFactory() : Parcelable {
+class UserFactory : Parcelable {
     override fun writeToParcel(parcel: Parcel?, p1: Int) {
         parcel!!.writeTypedList(users)
         parcel.writeInt(id)
@@ -16,6 +16,24 @@ class UserFactory() : Parcelable {
 
     private var id: Int = 0
     private var users = ArrayList<User>()
+
+    constructor() {
+        var thisPerson = addUser("LordeLover", 1994, "LordeLover@somewebsite.com", "")
+        thisPerson.favArtists1 = "Lorde"
+        thisPerson.favArtists2 = "Metallica"
+        thisPerson.favArtists3 = "The Who"
+        thisPerson.events = booleanArrayOf(true, true, true, false, false, false, false, false)
+
+        update(thisPerson, get(thisPerson.id))
+
+        thisPerson = addUser("John Doe", 1995, "johndoe@lyftemail.com", "")
+        thisPerson.favArtists1 = "Gorillaz"
+        thisPerson.favArtists2 = "Rebelution"
+        thisPerson.favArtists3 = "Shovels & Rope"
+        thisPerson.events = booleanArrayOf(false, false, false, false, true, true, true, false)
+
+        update(thisPerson, get(thisPerson.id))
+    }
 
     constructor(parcel: Parcel) : this() {
         parcel.readTypedList(users, User.CREATOR)
@@ -103,6 +121,6 @@ class UserFactory() : Parcelable {
     }
 
     fun size(): Int {
-        return users.size;
+        return users.size
     }
 }
