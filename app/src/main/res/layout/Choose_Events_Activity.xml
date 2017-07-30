@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.example.outsidehacks17.outsidehacks.ChooseEventsActivity"
+    tools:showIn="@layout/ChooseEventsActivity">
+
+    <TextView
+        android:id="@+id/whatEvents"
+        android:layout_width="344dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="402dp"
+        android:text="What else do you want to do?"
+        android:textAlignment="center"
+        android:textSize="28sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
+
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/aids_memorial_grove"
+        android:text="Aids Memorial Grove"
+        android:onClick="selectItem"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginBottom="357dp"
+        app:layout_constraintHorizontal_bias="0.398" />
+
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/botanical_garden"
+        android:text="Botanical Garden"
+        tools:layout_editor_absoluteY="218dp"
+        android:onClick="selectItem"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintHorizontal_bias="0.357"
+        />
+
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/academy_of_sciences"
+        android:text="Academy of Sciences"
+        tools:layout_editor_absoluteY="154dp"
+        tools:layout_editor_absoluteX="81dp"
+        android:onClick="selectItem"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginBottom="357dp"
+        app:layout_constraintHorizontal_bias="0.409"
+        />
+
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/conservatory_of_flowers"
+        android:text="Conservatory of Flowers"
+        tools:layout_editor_absoluteY="250dp"
+        android:onClick="selectItem"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintHorizontal_bias="0.448"
+        />
+
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/de_young_museum"
+        android:text="De Young Museum"
+        tools:layout_editor_absoluteY="282dp"
+        android:onClick="selectItem"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintHorizontal_bias="0.377"
+        />
+
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/japanese_tea_garden"
+        android:text="Japanese Tea Garden"
+        tools:layout_editor_absoluteY="346dp"
+        tools:layout_editor_absoluteX="83dp"
+        android:onClick="selectItem"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginBottom="357dp"
+        app:layout_constraintHorizontal_bias="0.409"
+        />
+
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/eco_lands"
+        android:text="Eco Lands"
+        tools:layout_editor_absoluteY="314dp"
+        android:onClick="selectItem"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintHorizontal_bias="0.3"
+        />
+
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/art_and_paintings"
+        android:text="Art and paintings"
+        tools:layout_editor_absoluteY="186dp"
+        android:onClick="selectItem"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintHorizontal_bias="0.359"
+        />
+
+    <Button
+        android:id="@+id/eventsDone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="I'm done!"
+        tools:layout_editor_absoluteX="132dp"
+        tools:layout_editor_absoluteY="417dp"
+        android:layout_gravity="center_horizontal"
+        android:onClick="finalSelection"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginBottom="357dp"
+        app:layout_constraintHorizontal_bias="0.409"
+        />
+
+</android.support.constraint.ConstraintLayout>
