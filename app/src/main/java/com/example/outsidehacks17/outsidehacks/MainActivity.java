@@ -1,8 +1,10 @@
 package com.example.outsidehacks17.outsidehacks;
 
 import android.content.Intent;
+import android.graphics.Typeface;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.widget.EditText;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -14,7 +16,9 @@ public class MainActivity extends AppCompatActivity {
         loginScreen.putExtra("UserFactory", new UserFactory());
         Intent artistScreen = new Intent(MainActivity.this, ArtistsActivity.class);
        // startActivity(artistScreen);
-        startActivity(loginScreen);
+        Intent eventsScreen = new Intent (MainActivity.this, ChooseEventsActivity.class);
+        startActivity(eventsScreen);
+       // startActivity(loginScreen);
         finish();
     }
 }

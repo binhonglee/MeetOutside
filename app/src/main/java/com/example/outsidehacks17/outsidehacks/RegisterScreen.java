@@ -1,6 +1,7 @@
 package com.example.outsidehacks17.outsidehacks;
 
 import android.content.Intent;
+import android.graphics.Color;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -13,6 +14,8 @@ public class RegisterScreen extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_register_screen);
+        //getWindow().getDecorView().setBackgroundColor(Color.BLACK);
+
 
         final EditText etName = (EditText) findViewById(R.id.etName);
         final EditText etEmail = (EditText) findViewById(R.id.etEmail);
