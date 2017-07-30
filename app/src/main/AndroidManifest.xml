@@ -22,8 +22,10 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".RegisterScreen" />
-        <activity android:name=".LoginScreen"></activity>
+        <activity
+            android:name=".RegisterScreen"
+            android:theme="@style/Theme.AppCompat.DayNight"/>
+        <activity android:name=".LoginScreen"/>
         <activity
             android:name=".ProfileDisplay"
             android:label="@string/title_activity_profile_display">

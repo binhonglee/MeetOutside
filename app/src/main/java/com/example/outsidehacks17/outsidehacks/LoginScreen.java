@@ -1,6 +1,7 @@
 package com.example.outsidehacks17.outsidehacks;
 
 import android.content.Intent;
+import android.graphics.Typeface;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -29,5 +30,7 @@ public class LoginScreen extends AppCompatActivity {
                 LoginScreen.this.startActivity(registerIntent);
             }
         });
+
+
     }
 }
