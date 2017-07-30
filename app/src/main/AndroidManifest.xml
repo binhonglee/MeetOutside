@@ -13,7 +13,6 @@
         android:required="true" />
 
     <uses-permission android:name="android.permission.CAMERA" />
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
 
     <application
         android:allowBackup="true"
@@ -36,6 +35,7 @@
         <activity
             android:name=".ArtistsActivity"
             android:label="@string/title_activity_artists"
+            android:screenOrientation="sensorPortrait"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".LoginScreen"
@@ -56,9 +56,11 @@
         <activity
             android:name=".LyftAPI"
             android:label="@string/title_activity_lyft_api"
+            android:screenOrientation="sensorPortrait"
             android:theme="@style/AppTheme.NoActionBar" />
-        <activity android:name=".EditProfile" />
-        android:theme="@style/AppTheme.NoActionBar"/>
+        <activity
+            android:name=".EditProfile"
+            android:screenOrientation="sensorPortrait" />
         <meta-data
             android:name="com.google.android.geo.API_KEY"
             android:value="AIzaSyB4tXHE1N4yWNfMPyi0yReZqQtInOjBl0I" />
