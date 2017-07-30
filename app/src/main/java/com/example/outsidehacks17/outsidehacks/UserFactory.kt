@@ -1,13 +1,25 @@
 package com.example.outsidehacks17.outsidehacks
 
+import android.os.Parcel
+import android.os.Parcelable
 import java.util.ArrayList
 
-class UserFactory {
+class UserFactory() : Parcelable {
+    override fun writeToParcel(parcel: Parcel?, p1: Int) {
+        parcel!!.writeTypedList(users)
+        parcel.writeInt(id)
+    }
+
+    override fun describeContents(): Int {
+        TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
+    }
+
     private var id: Int = 0
     private var users = ArrayList<User>()
 
-    constructor() {
-        id = 0
+    constructor(parcel: Parcel) : this() {
+        parcel.readTypedList(users, User.CREATOR)
+        id = parcel.readInt()
     }
 
     fun get(index: Int): User {
@@ -73,6 +85,16 @@ class UserFactory {
         else
         {
             return search(index, currentId + 1, end)
+        }
+    }
+
+    companion object CREATOR : Parcelable.Creator<UserFactory> {
+        override fun createFromParcel(parcel: Parcel): UserFactory {
+            return UserFactory(parcel)
+        }
+
+        override fun newArray(size: Int): Array<UserFactory?> {
+            return arrayOfNulls(size)
         }
     }
 }
