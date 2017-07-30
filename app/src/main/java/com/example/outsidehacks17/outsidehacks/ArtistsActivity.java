@@ -22,9 +22,9 @@ public class ArtistsActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_artists);
 
-///TODOO get users
+
         users = this.getIntent().getParcelableExtra("UserFactory");
-        currentUser = this.getIntent().getParcelableExtra("id");
+        currentUser = this.getIntent().getIntExtra("id", 0);
 
 
 

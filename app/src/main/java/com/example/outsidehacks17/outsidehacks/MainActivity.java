@@ -12,6 +12,8 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         Intent loginScreen = new Intent(MainActivity.this, LoginScreen.class);
         loginScreen.putExtra("UserFactory", new UserFactory());
+        Intent artistScreen = new Intent(MainActivity.this, ArtistsActivity.class);
+       // startActivity(artistScreen);
         startActivity(loginScreen);
         finish();
     }
