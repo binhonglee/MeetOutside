@@ -1,5 +1,6 @@
 package com.example.outsidehacks17.outsidehacks;
 
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
@@ -11,6 +12,7 @@ import android.widget.AutoCompleteTextView;
 import android.widget.EditText;
 import android.widget.ArrayAdapter;
 import android.view.MotionEvent;
+import android.widget.Toast;
 
 
 public class ArtistsActivity extends AppCompatActivity {
@@ -86,6 +88,21 @@ public class ArtistsActivity extends AppCompatActivity {
         users.get(currentUser).setFavArtists2(textview2.getText().toString());
         users.get(currentUser).setFavArtists3(textView3.getText().toString());
 
+        String artist1 = textView1.getText().toString().trim();
+        String artist2 = textview2.getText().toString().trim();
+        String artist3 = textView3.getText().toString().trim();
+
+        if (artist1.isEmpty() || artist1.equals("") ||
+                artist2.isEmpty() || artist2.equals("") ||
+                artist3.isEmpty() || artist2.equals("")) {
+
+            Context context = getApplicationContext();
+            CharSequence text = "Please fill in empty field(s)";
+            int duration = Toast.LENGTH_LONG;
+            Toast toast = Toast.makeText(context, text, duration);
+            toast.show();
+            return;
+        }
         Intent i = new Intent(this, ChooseEventsActivity.class);
         i.putExtra("UserFactory", users);
         i.putExtra("id", currentUser);
