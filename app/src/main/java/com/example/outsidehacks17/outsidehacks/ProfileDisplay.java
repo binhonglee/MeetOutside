@@ -1,5 +1,6 @@
 package com.example.outsidehacks17.outsidehacks;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.design.widget.BottomNavigationView;
@@ -83,11 +84,22 @@ public class ProfileDisplay extends AppCompatActivity implements LoadImageTask.L
             yesBtn.setVisibility(View.GONE);
             noBtn = (Button) findViewById(R.id.noBtn);
             noBtn.setVisibility(View.GONE);
+            editBtn.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    Intent registerIntent = new Intent(ProfileDisplay.this, EditProfile.class);
+                    registerIntent.putExtra("UserFactory", users);
+                    registerIntent.putExtra("id", currentUser);
+                    startActivity(registerIntent);
+                    finish();
+                }
+            });
+            new LoadImageTask(this).execute(IMAGE_URL);
         } else {
             editBtn = (Button) findViewById(R.id.editBtn);
             editBtn.setVisibility(View.GONE);
         }
 
-        new LoadImageTask(this).execute(IMAGE_URL);
     }
+
 }
