@@ -11,7 +11,7 @@ class UserFactory() : Parcelable {
     }
 
     override fun describeContents(): Int {
-        TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
+        return 0
     }
 
     private var id: Int = 0
@@ -24,6 +24,10 @@ class UserFactory() : Parcelable {
 
     fun get(index: Int): User {
         return users[search(index, 0, users.size)];
+    }
+
+    fun location(index: Int): User {
+        return users[index]
     }
 
     fun addUser(name: String, birthYear: Int, email: String, password: String): User {
@@ -96,5 +100,9 @@ class UserFactory() : Parcelable {
         override fun newArray(size: Int): Array<UserFactory?> {
             return arrayOfNulls(size)
         }
+    }
+
+    fun size(): Int {
+        return users.size;
     }
 }
