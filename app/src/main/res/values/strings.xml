@@ -10,4 +10,5 @@
     <string name="eco_lands">Eco Lands</string>
     <string name="art_and_painting">Art and paintings</string>
     <string name="eventsDone">I"'"m done!</string>
+    <string name="title_activity_profile_overview">profileOverviewActivity</string>
 </resources>
