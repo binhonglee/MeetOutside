@@ -4,25 +4,26 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/colorPrimaryDark"
     tools:context="com.example.outsidehacks17.outsidehacks.ArtistsActivity">
-
 
 
     <TextView
         android:id="@+id/textView"
-        android:layout_width="327dp"
-        android:layout_height="95dp"
-        android:text="Top 3 Artists You're Most Excited to See"
+        android:layout_width="349dp"
+        android:layout_height="92dp"
+        android:text="Top 3 artists you're most excited to see:"
         android:textAlignment="center"
         android:textAppearance="@style/TextAppearance.AppCompat.Title"
-        android:textSize="24sp"
+        android:textSize="36sp"
         android:visibility="visible"
         app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.514"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintHorizontal_bias="0.508"
-        app:layout_constraintVertical_bias="0.105" />
+        app:layout_constraintVertical_bias="0.437"
+        tools:layout_editor_absoluteX="7dp" />
 
     <AutoCompleteTextView
         android:id="@+id/artist1"
@@ -32,11 +33,13 @@
         android:imeOptions="actionNext"
         android:maxLines="1"
         android:inputType="textAutoComplete"
+        android:background="@drawable/rounded_edit"
+        android:gravity="center"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintHorizontal_bias="0.502"
-        android:layout_marginBottom="315dp"
+        android:layout_marginBottom="249dp"
 
         />
 
@@ -49,13 +52,15 @@
         android:maxLines="1"
         android:imeOptions="actionNext"
         android:inputType="textAutoComplete"
+        android:background="@drawable/rounded_edit"
+        android:gravity="center"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintTop_toTopOf="@+id/artist1"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintHorizontal_bias="0.502"
         android:layout_marginBottom="43dp"
-        app:layout_constraintVertical_bias="0.22" />
+        app:layout_constraintVertical_bias="0.316" />
 
 
     <AutoCompleteTextView
@@ -66,23 +71,51 @@
         android:imeOptions="actionDone"
         android:maxLines="1"
         android:inputType="textAutoComplete"
+        android:background="@drawable/rounded_edit"
+        android:gravity="center"
         app:layout_constraintTop_toTopOf="@+id/artist2"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintHorizontal_bias="0.502"
-        android:layout_marginBottom="115dp" />
+        android:layout_marginBottom="115dp"
+        app:layout_constraintVertical_bias="0.927" />
 
     <Button
         android:id="@+id/buttonContinue"
         android:layout_width="93dp"
         android:layout_height="48dp"
-        android:layout_marginBottom="102dp"
+        android:layout_marginBottom="53dp"
         android:onClick="buttonContinue"
         android:text="Continue"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintHorizontal_bias="0.501"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:layout_editor_absoluteX="132dp"
+        tools:layout_editor_absoluteY="112dp" />
+
+    <ImageView
+        android:id="@+id/imageView5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <ImageView
+        android:id="@+id/imageView9"
+        android:layout_width="420dp"
+        android:layout_height="185dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="50dp"
+        android:scaleType="fitXY"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/osl" />
 
 </android.support.constraint.ConstraintLayout>

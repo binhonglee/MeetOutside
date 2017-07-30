@@ -28,6 +28,7 @@ class User(var id: Int, var name: String, var birthYear: Int, var email: String,
     var favArtists3: String = ""
     var image: String = ""
     var toDo = ArrayList<String>()
+    var events = BooleanArray(8)
     var matched = ArrayList<Int>()
 
     constructor(parcel: Parcel) : this(
@@ -65,17 +66,22 @@ class User(var id: Int, var name: String, var birthYear: Int, var email: String,
         for (i in 0..users.size()) {
             var user = users.location(i)
             var toCompare = 0
+            for (j in 0..events.size) {
+                if (user.events[j] == true && user.events[j] == events[j]) {
+                    toCompare++
+                }
+            }
 
             if (user.favArtists1 == favArtists1 || user.favArtists2 == favArtists1 || user.favArtists3 == favArtists1) {
-                toCompare++
+                toCompare+=5
             }
 
             if (user.favArtists1 == favArtists2 || user.favArtists2 == favArtists2 || user.favArtists3 == favArtists2) {
-                toCompare++
+                toCompare+=5
             }
 
             if (user.favArtists1 == favArtists3 || user.favArtists3 == favArtists2 || user.favArtists3 == favArtists3) {
-                toCompare++
+                toCompare+=5
             }
 
             comparables.put(i, toCompare)

@@ -9,7 +9,7 @@ import android.widget.CheckBox;
 import java.util.ArrayList;
 
 public class ChooseEventsActivity extends AppCompatActivity {
-    ArrayList<String> selection = new ArrayList<>();
+    boolean[] selection = new boolean[8];
     private UserFactory users;
     private int currentUser;
 
@@ -26,60 +26,28 @@ public class ChooseEventsActivity extends AppCompatActivity {
         boolean checked = ((CheckBox) view).isChecked();
         switch (view.getId()) {
             case R.id.aids_memorial_grove:
-                if (checked) {
-                    selection.add("Aids Memorial Grove");
-                } else {
-                    selection.remove("Aids Memorial Grove");
-                }
+                selection[0] = checked;
                 break;
             case R.id.botanical_garden:
-                if (checked) {
-                    selection.add("Botanical Garden");
-                } else {
-                    selection.remove("Botanical Garden");
-                }
+                selection[1] = checked;
                 break;
             case R.id.academy_of_sciences:
-                if (checked) {
-                    selection.add("Academy of Sciences");
-                } else {
-                    selection.remove("Academy of Sciences");
-                }
+                selection[2] = checked;
                 break;
             case R.id.conservatory_of_flowers:
-                if (checked) {
-                    selection.add("Conservatory of Flowers");
-                } else {
-                    selection.remove("Conservatory of Flowers");
-                }
+                selection[3] = checked;
                 break;
             case R.id.de_young_museum:
-                if (checked) {
-                    selection.add("De Young Museum");
-                } else {
-                    selection.remove("De Young Museum");
-                }
+                selection[4] = checked;
                 break;
             case R.id.japanese_tea_garden:
-                if (checked) {
-                    selection.add("Japanese Tea Garden");
-                } else {
-                    selection.remove("Japanese Tea Garden");
-                }
+                selection[5] = checked;
                 break;
             case R.id.eco_lands:
-                if (checked) {
-                    selection.add("Eco Lands");
-                } else {
-                    selection.remove("Eco Lands");
-                }
+                selection[6] = checked;
                 break;
             case R.id.art_and_paintings:
-                if (checked) {
-                    selection.add("Art and paintings");
-                } else {
-                    selection.remove("Art and paintings");
-                }
+                selection[7] = checked;
                 break;
         }
     }
