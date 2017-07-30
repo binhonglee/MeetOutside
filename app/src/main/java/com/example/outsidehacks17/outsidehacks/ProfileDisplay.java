@@ -60,7 +60,7 @@ public class ProfileDisplay extends AppCompatActivity implements LoadImageTask.L
         super.onCreate(savedInstanceState);
 
         users = this.getIntent().getParcelableExtra("UserFactory");
-        currentUser = this.getIntent().getParcelableExtra("id");
+        currentUser = this.getIntent().getIntExtra("id", 0);
         setContentView(R.layout.activity_profile_display);
 
         name = (TextView) findViewById(R.id.name);
