@@ -18,7 +18,7 @@
         android:ems="10"
         android:hint="E-mail"
         android:inputType="textPersonName"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="12dp"
         app:layout_constraintTop_toBottomOf="@+id/etAge"
         android:layout_marginLeft="8dp"
         app:layout_constraintLeft_toLeftOf="parent"
@@ -40,8 +40,7 @@
         app:layout_constraintLeft_toLeftOf="parent"
         android:layout_marginTop="8dp"
         app:layout_constraintTop_toBottomOf="@+id/etPassword"
-        app:layout_constraintVertical_bias="1.0"
-        app:layout_constraintHorizontal_bias="0.462" />
+        app:layout_constraintVertical_bias="0.0" />
 
 
     <EditText
@@ -50,7 +49,7 @@
         android:layout_height="42dp"
         android:layout_marginLeft="8dp"
         android:layout_marginRight="8dp"
-        android:layout_marginTop="198dp"
+        android:layout_marginTop="262dp"
         android:ems="10"
         android:hint="Name (First and Last)"
         android:inputType="textPersonName"
@@ -71,7 +70,7 @@
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/etName"
-        app:layout_constraintHorizontal_bias="0.51" />
+        app:layout_constraintHorizontal_bias="0.511" />
 
 
     <EditText
@@ -80,7 +79,7 @@
         android:layout_height="38dp"
         android:layout_marginLeft="8dp"
         android:layout_marginRight="8dp"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="19dp"
         android:ems="10"
         android:hint="Password"
         android:inputType="textPassword"
@@ -93,19 +92,47 @@
         android:id="@+id/etTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="0dp"
+        android:background="@color/colorPrimaryDark"
+        android:text="meet os[L]"
+        android:textColor="#371502"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display3"
+        app:layout_constraintTop_toBottomOf="@+id/imageView2"
+        android:layout_marginRight="8dp"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginLeft="8dp"
+        app:layout_constraintLeft_toLeftOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="139dp"
+        android:layout_height="146dp"
+        app:srcCompat="@drawable/dave"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="16dp"
+        android:layout_marginRight="8dp"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginLeft="8dp"
+        app:layout_constraintLeft_toLeftOf="parent" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_marginBottom="8dp"
         android:layout_marginLeft="8dp"
         android:layout_marginRight="8dp"
-        android:layout_marginTop="8dp"
-        android:fontFamily="serif"
-        android:text="meet os[L]"
-        android:textAppearance="@style/TextAppearance.AppCompat.Display2"
-        android:background="@color/colorPrimaryDark"
+        android:layout_marginTop="5dp"
+        android:text="Meet Outside [Lands]"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        android:textColor="#ad6009"
+        android:textSize="16dp"
+        android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/etName"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.75" />
+        app:layout_constraintTop_toBottomOf="@+id/etTitle"
+        app:layout_constraintVertical_bias="1.0" />
 
 
 </android.support.constraint.ConstraintLayout>
