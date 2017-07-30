@@ -14,7 +14,9 @@ public class MainActivity extends AppCompatActivity {
         loginScreen.putExtra("UserFactory", new UserFactory());
         Intent artistScreen = new Intent(MainActivity.this, ArtistsActivity.class);
        // startActivity(artistScreen);
-        startActivity(loginScreen);
+        Intent eventsScreen = new Intent (MainActivity.this, ChooseEventsActivity.class);
+        startActivity(eventsScreen);
+       // startActivity(loginScreen);
         finish();
     }
 }

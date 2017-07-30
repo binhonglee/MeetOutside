@@ -6,19 +6,23 @@
     android:layout_height="match_parent"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
     tools:context="com.example.outsidehacks17.outsidehacks.ChooseEventsActivity"
-    tools:showIn="@layout/activity_choose_events">
+    tools:showIn="@layout/activity_choose_events"
+    tools:layout_editor_absoluteY="81dp"
+    tools:layout_editor_absoluteX="0dp">
 
     <TextView
         android:id="@+id/whatEvents"
         android:layout_width="344dp"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="402dp"
         android:text="What else do you want to do?"
         android:textAlignment="center"
         android:textSize="28sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent" />
+        tools:layout_editor_absoluteX="20dp"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintBottom_toTopOf="@+id/eventsDone"
+        app:layout_constraintVertical_bias="0.058" />
 
     <CheckBox
         android:layout_width="wrap_content"
@@ -26,95 +30,115 @@
         android:id="@+id/aids_memorial_grove"
         android:text="Aids Memorial Grove"
         android:onClick="selectItem"
+        tools:layout_editor_absoluteX="16dp"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="8dp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        android:layout_marginBottom="357dp"
-        app:layout_constraintHorizontal_bias="0.398" />
+        android:layout_marginBottom="8dp"
+        app:layout_constraintVertical_bias="0.323" />
 
     <CheckBox
         android:layout_width="139dp"
         android:layout_height="32dp"
         android:id="@+id/botanical_garden"
         android:text="Botanical Garden"
-        tools:layout_editor_absoluteY="218dp"
         android:onClick="selectItem"
-        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintVertical_bias="0.416"
+        android:layout_marginRight="8dp"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintHorizontal_bias="0.359"
-        />
+        android:layout_marginLeft="8dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintHorizontal_bias="0.868" />
 
     <CheckBox
         android:layout_width="167dp"
         android:layout_height="32dp"
         android:id="@+id/academy_of_sciences"
         android:text="Academy of Sciences"
-        tools:layout_editor_absoluteY="154dp"
         android:onClick="selectItem"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintHorizontal_bias="0.41"
-        />
+        tools:layout_editor_absoluteX="16dp"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintVertical_bias="0.416" />
 
     <CheckBox
-        android:layout_width="185dp"
-        android:layout_height="32dp"
+        android:layout_width="147dp"
+        android:layout_height="49dp"
         android:id="@+id/conservatory_of_flowers"
         android:text="Conservatory of Flowers"
-        tools:layout_editor_absoluteY="250dp"
         android:onClick="selectItem"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintHorizontal_bias="0.452"
-        />
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="8dp"
+        tools:layout_editor_absoluteX="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintVertical_bias="0.607" />
 
     <CheckBox
         android:layout_width="148dp"
         android:layout_height="32dp"
         android:id="@+id/de_young_museum"
         android:text="De Young Museum"
-        tools:layout_editor_absoluteY="282dp"
         android:onClick="selectItem"
-        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginBottom="8dp"
+        android:layout_marginRight="8dp"
+        app:layout_constraintVertical_bias="0.498"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintHorizontal_bias="0.377"
-        />
+        android:layout_marginLeft="8dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintHorizontal_bias="0.904" />
 
     <CheckBox
         android:layout_width="169dp"
         android:layout_height="32dp"
         android:id="@+id/japanese_tea_garden"
         android:text="Japanese Tea Garden"
-        tools:layout_editor_absoluteY="346dp"
         android:onClick="selectItem"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintHorizontal_bias="0.409"
-        />
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintVertical_bias="0.585"
+        android:layout_marginRight="11dp"
+        app:layout_constraintRight_toRightOf="parent" />
 
     <CheckBox
         android:layout_width="97dp"
         android:layout_height="32dp"
         android:id="@+id/eco_lands"
         android:text="Eco Lands"
-        tools:layout_editor_absoluteY="314dp"
         android:onClick="selectItem"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintHorizontal_bias="0.303"
-        />
+        tools:layout_editor_absoluteX="16dp"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginBottom="8dp" />
 
     <CheckBox
         android:layout_width="137dp"
         android:layout_height="32dp"
         android:id="@+id/art_and_paintings"
         android:text="Art and paintings"
-        tools:layout_editor_absoluteY="186dp"
         android:onClick="selectItem"
-        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintVertical_bias="0.323"
+        android:layout_marginRight="8dp"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintHorizontal_bias="0.36"
-        />
+        android:layout_marginLeft="8dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintHorizontal_bias="0.861" />
 
     <Button
         android:id="@+id/eventsDone"
@@ -124,8 +148,8 @@
         android:onClick="doneButton"
         android:text="I'm done!"
         android:textAlignment="textStart"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        tools:layout_editor_absoluteY="419dp" />
+        tools:layout_editor_absoluteX="148dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginBottom="49dp" />
 
 </android.support.constraint.ConstraintLayout>
