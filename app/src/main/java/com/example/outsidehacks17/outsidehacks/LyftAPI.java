@@ -32,8 +32,8 @@ public class LyftAPI extends AppCompatActivity {
 
 
         ApiConfig apiConfig = new ApiConfig.Builder()
-                .setClientId("...")
-                .setClientToken("...")
+                .setClientId("nC2KHzgfc4WM")
+                .setClientToken("pbUdrdfc6OC7gVy6Q5/lAz2UsnMUEynB9pF8jSLgEbyuwTjCi5qBmNnt+wMVANSJVvZoe/rSQz+nrPU9ULIo6W55r1j0hOKKPd+ObicrkU7tjFYqTiNrSfI=")
                 .build();
     }
 
