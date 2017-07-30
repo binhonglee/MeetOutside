@@ -1,5 +1,6 @@
 package com.example.outsidehacks17.outsidehacks;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
@@ -8,12 +9,17 @@ import android.widget.CheckBox;
 import java.util.ArrayList;
 
 public class ChooseEventsActivity extends AppCompatActivity {
-    ArrayList<String> selection = new ArrayList<String>();
+    ArrayList<String> selection = new ArrayList<>();
+    private UserFactory users;
+    private int currentUser;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_choose_events);
+
+        users = this.getIntent().getParcelableExtra("UserFactory");
+        currentUser = this.getIntent().getIntExtra("id", 0);
     }
 
     public void selectItem (View view) {
@@ -77,5 +83,15 @@ public class ChooseEventsActivity extends AppCompatActivity {
                 break;
         }
     }
+
+    public void doneButton (View v) {
+        //TODO add events to profile
+        Intent i = new Intent(this, ProfileDisplay.class);
+        i.putExtra("UserFactory", users);
+        i.putExtra("id", currentUser);
+        startActivity(i);
+        finish();
+    }
+
 
 }

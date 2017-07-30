@@ -38,13 +38,13 @@ class UserFactory() : Parcelable {
         return newUser
     }
 
-    fun login(email: String, password: String): Boolean {
+    fun login(email: String, password: String): Int {
         users
                 .asSequence()
                 .filter { it.email == email }
-                .forEach { return (it.checkPass(password)) }
+                .forEach { if (it.checkPass(password)) { return it.id } }
 
-        return false
+        throw NullPointerException()
     }
 
     fun update(oldUser: User, newUser: User): Boolean {
