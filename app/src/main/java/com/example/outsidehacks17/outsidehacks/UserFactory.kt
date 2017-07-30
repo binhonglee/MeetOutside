@@ -11,7 +11,7 @@ class UserFactory() : Parcelable {
     }
 
     override fun describeContents(): Int {
-        TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
+        return 0
     }
 
     private var id: Int = 0
@@ -26,6 +26,10 @@ class UserFactory() : Parcelable {
         return users[search(index, 0, users.size)];
     }
 
+    fun location(index: Int): User {
+        return users[index]
+    }
+
     fun addUser(name: String, birthYear: Int, email: String, password: String): User {
         users
                 .asSequence()
@@ -38,13 +42,13 @@ class UserFactory() : Parcelable {
         return newUser
     }
 
-    fun login(email: String, password: String): Boolean {
+    fun login(email: String, password: String): Int {
         users
                 .asSequence()
                 .filter { it.email == email }
-                .forEach { return (it.checkPass(password)) }
+                .forEach { if (it.checkPass(password)) { return it.id } }
 
-        return false
+        throw NullPointerException()
     }
 
     fun update(oldUser: User, newUser: User): Boolean {
@@ -96,5 +100,9 @@ class UserFactory() : Parcelable {
         override fun newArray(size: Int): Array<UserFactory?> {
             return arrayOfNulls(size)
         }
+    }
+
+    fun size(): Int {
+        return users.size;
     }
 }

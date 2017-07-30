@@ -5,6 +5,8 @@ import android.support.annotation.NonNull;
 import android.support.design.widget.BottomNavigationView;
 import android.support.v7.app.AppCompatActivity;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.Button;
 import android.widget.TextView;
 
 import android.graphics.Bitmap;
@@ -18,9 +20,13 @@ public class ProfileDisplay extends AppCompatActivity implements LoadImageTask.L
     private TextView age;
     private TextView mTextMessage;
     private ImageView mImageView;
+    private UserFactory users;
+    private int currentUser;
+    private Button editBtn;
+    private Button yesBtn;
+    private Button noBtn;
 
-
-    public static final String IMAGE_URL = "https://binhonglee.github.io/images/profile.jpg";
+    public static final String IMAGE_URL = "http://www.socialmediasearch.co.uk/wp-content/uploads/2014/12/s5.jpg";
 
     @Override
     public void onImageLoaded(Bitmap bitmap) {
@@ -57,19 +63,30 @@ public class ProfileDisplay extends AppCompatActivity implements LoadImageTask.L
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+        users = this.getIntent().getParcelableExtra("UserFactory");
+        currentUser = this.getIntent().getIntExtra("id", users.size() - 1);
+        int toShow = this.getIntent().getIntExtra("othersId", currentUser);
+
         setContentView(R.layout.activity_profile_display);
 
-        UserFactory users = new UserFactory();
-        users.addUser("BinHong Lee", 1994, "binhonglee@hotmail.com", "skldjvnlsd");
         name = (TextView) findViewById(R.id.name);
-        name.setText("Name: " + users.get(0).getName());
+        name.setText("Name: " + users.get(toShow).getName());
         age = (TextView) findViewById(R.id.age);
-        age.setText("Age: " + (2017 - users.get(0).getBirthYear()));
+        age.setText("Age: " + (2017 - users.get(toShow).getBirthYear()));
         email = (TextView) findViewById(R.id.email);
-        email.setText("Email: " + users.get(0).getEmail());
+        email.setText("Email: " + users.get(toShow).getEmail());
         mImageView = (ImageView) findViewById(R.id.image);
-        BottomNavigationView navigation = (BottomNavigationView) findViewById(R.id.navigation);
-        navigation.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener);
+
+        if (toShow == currentUser) {
+            yesBtn = (Button) findViewById(R.id.yesBtn);
+            yesBtn.setVisibility(View.GONE);
+            noBtn = (Button) findViewById(R.id.noBtn);
+            noBtn.setVisibility(View.GONE);
+        } else {
+            editBtn = (Button) findViewById(R.id.editBtn);
+            editBtn.setVisibility(View.GONE);
+        }
 
         new LoadImageTask(this).execute(IMAGE_URL);
     }
