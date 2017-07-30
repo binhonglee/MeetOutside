@@ -22,11 +22,8 @@ public class ArtistsActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_artists);
 
-
         users = this.getIntent().getParcelableExtra("UserFactory");
         currentUser = this.getIntent().getIntExtra("id", 0);
-
-
 
         AutoCompleteTextView textView1 = (AutoCompleteTextView) findViewById(R.id.artist1);
         AutoCompleteTextView textview2 = (AutoCompleteTextView) findViewById(R.id.artist2);
@@ -36,11 +33,7 @@ public class ArtistsActivity extends AppCompatActivity {
         textView1.setAdapter(adapter);
         textview2.setAdapter(adapter);
         textView3.setAdapter(adapter);
-
-
     }
-
-
 
     private static final String[] ARTISTNAMES = new String[] {
             "Metallica", "The Who", "Gorillaz", "Lorde", "A Tribe Called Quest", "alt-J", "Queens Of The Stone Age", "Above & Beyond", "Fleet Foxes", "Empire Of The Sun", "The Avett Brothers",
@@ -57,12 +50,9 @@ public class ArtistsActivity extends AppCompatActivity {
         AutoCompleteTextView textview2 = (AutoCompleteTextView) findViewById(R.id.artist2);
         AutoCompleteTextView textView3 = (AutoCompleteTextView) findViewById(R.id.artist3);
 
-
         users.get(currentUser).setFavArtists1(textView1.getText().toString());
         users.get(currentUser).setFavArtists2(textview2.getText().toString());
         users.get(currentUser).setFavArtists3(textView3.getText().toString());
-
-
 
         Intent i = new Intent(this, ChooseEventsActivity.class);
         i.putExtra("UserFactory", users);
