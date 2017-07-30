@@ -4,11 +4,8 @@ import android.content.Intent;
 import android.graphics.Typeface;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-<<<<<<< HEAD
 import android.widget.ImageView;
-=======
 import android.widget.EditText;
->>>>>>> 99b145486646b42569da5a0b0e18ffe2ca19ced8
 
 public class MainActivity extends AppCompatActivity {
 
