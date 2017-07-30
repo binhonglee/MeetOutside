@@ -19,6 +19,8 @@ public class MainActivity extends AppCompatActivity {
        // startActivity(artistScreen);
        // Intent eventsScreen = new Intent (MainActivity.this, ChooseEventsActivity.class);
        // startActivity(eventsScreen);
+        //Intent lyftAPI = new Intent (MainActivity.this, LyftAPI.class);
+        //startActivity(lyftAPI);
         startActivity(loginScreen);
         finish();
     }
