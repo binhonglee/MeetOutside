@@ -4,14 +4,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
-import android.view.animation.Animation;
-import android.view.animation.AnimationUtils;
 import android.widget.CheckBox;
-import android.widget.ImageView;
-
-import java.util.ArrayList;
-
-import static android.R.attr.animation;
 
 public class ChooseEventsActivity extends AppCompatActivity {
     boolean[] selection = new boolean[8];
