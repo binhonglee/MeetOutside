@@ -1,7 +1,6 @@
 package com.example.outsidehacks17.outsidehacks;
 
 import android.content.Intent;
-import android.graphics.Typeface;
 import android.os.Parcelable;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -22,7 +21,7 @@ public class LoginScreen extends AppCompatActivity {
 
         Parcelable myUser = this.getIntent().getParcelableExtra("UserFactory");
 
-        final EditText etEmail = (EditText) findViewById(R.id.etEmail);
+        final EditText etEmail = (EditText) findViewById(R.id.etName);
         final EditText etPassword = (EditText) findViewById(R.id.etPassword);
 
         final Button bLogin = (Button) findViewById(R.id.bLogin);

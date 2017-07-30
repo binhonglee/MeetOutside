@@ -2,17 +2,12 @@ package com.example.outsidehacks17.outsidehacks;
 
 import android.content.Context;
 import android.content.Intent;
-import android.graphics.Color;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
-import android.view.Window;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
-
-import static com.example.outsidehacks17.outsidehacks.R.id.bRegister;
-import static com.example.outsidehacks17.outsidehacks.R.id.etName;
 
 public class RegisterScreen extends AppCompatActivity {
 
@@ -29,7 +24,7 @@ public class RegisterScreen extends AppCompatActivity {
         public void onClick(View view) {
 
             EditText etName = (EditText) findViewById(R.id.etName);
-            EditText etEmail = (EditText) findViewById(R.id.etEmail);
+            EditText etEmail = (EditText) findViewById(R.id.etName);
             EditText etAge = (EditText) findViewById(R.id.etAge);
             EditText etPassword = (EditText) findViewById(R.id.etPassword);
 
