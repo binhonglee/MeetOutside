@@ -31,4 +31,5 @@
     <string name="eventsDone">I"'"m done!</string>
     <string name="title_activity_profile_overview">profileOverviewActivity</string>
     <string name="profile_picture">Profile Picture</string>
+    <string name="title_activity_lyft_api">LyftAPI</string>
 </resources>
