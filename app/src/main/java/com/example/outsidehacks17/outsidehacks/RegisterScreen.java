@@ -52,8 +52,8 @@ public class RegisterScreen extends AppCompatActivity {
             }
 
             UserFactory myUser = new UserFactory();
-            User newUser = myUser.addUser(etName.getText().toString(), Integer.parseInt(etAge.getText().toString()), etEmail.getText().toString(), etPassword.getText().toString());
-            Intent registerIntent = new Intent(RegisterScreen.this, ProfileDisplay.class);
+            User newUser = myUser.addUser(etName.getText().toString(), Integer.parseInt(etAge.getText().toString()), etEmail.getText().toString().trim().toLowerCase(), etPassword.getText().toString());
+            Intent registerIntent = new Intent(RegisterScreen.this, ArtistsActivity.class);
             registerIntent.putExtra("UserFactory", myUser);
             registerIntent.putExtra("id", newUser.getId());
             RegisterScreen.this.startActivity(registerIntent);

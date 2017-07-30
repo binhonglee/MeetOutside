@@ -43,7 +43,7 @@ public class LoginScreen extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 try {
-                    int id = users.login(etEmail.getText().toString(), etPassword.getText().toString());
+                    int id = users.login(etEmail.getText().toString().trim().toLowerCase(), etPassword.getText().toString());
                     Intent profile = new Intent(LoginScreen.this, ProfileDisplay.class);
                     profile.putExtra("UserFactory", users);
                     profile.putExtra("id", id);
