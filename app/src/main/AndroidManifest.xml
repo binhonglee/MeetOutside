@@ -20,7 +20,13 @@
         </activity>
         <activity
             android:name=".ProfileDisplay"
-            android:label="@string/title_activity_profile_display"></activity>
+            android:label="@string/title_activity_profile_display">
+        </activity>
+        <activity
+            android:name=".ChooseEventsActivity"
+            android:label="@string/title_activity_create_profile"
+            android:theme="@style/AppTheme.NoActionBar">
+        </activity>
     </application>
 
 </manifest>

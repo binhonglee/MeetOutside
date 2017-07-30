@@ -4,4 +4,14 @@
     <string name="title_home">Home</string>
     <string name="title_dashboard">Dashboard</string>
     <string name="title_notifications">Notifications</string>
+    <string name="title_activity_create_profile">CreateProfileActivity</string>
+    <string name="aids_memorial_grove">Aids Memorial Grove</string>
+    <string name="botanical_garden">Botanical Garden</string>
+    <string name="academy_of_sciences">Academy of Sciences</string>
+    <string name="conservatory_of_flowers">Conservatory of Flowers</string>
+    <string name="de_young_museum">De Young Museum</string>
+    <string name="japanese_tea_garden">Japanese Tea Garden</string>
+    <string name="eco_lands">Eco Lands</string>
+    <string name="art_and_painting">Art and paintings</string>
+    <string name="eventsDone">I"'"m done!</string>
 </resources>
