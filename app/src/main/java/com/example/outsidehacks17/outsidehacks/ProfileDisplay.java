@@ -36,8 +36,8 @@ public class ProfileDisplay extends AppCompatActivity implements LoadImageTask.L
     private UserFactory users;
     private int currentUser;
     private Button editBtn;
-    private Button yesBtn;
-    private Button noBtn;
+    private ImageView yesBtn;
+    private ImageView noBtn;
     private Button matchingBtn;
     boolean toReturn;
 
@@ -78,7 +78,7 @@ public class ProfileDisplay extends AppCompatActivity implements LoadImageTask.L
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
+        getSupportActionBar().hide();
         users = this.getIntent().getParcelableExtra("UserFactory");
         currentUser = this.getIntent().getIntExtra("id", users.size() - 1);
         final int toShow = this.getIntent().getIntExtra("othersId", currentUser);
@@ -93,8 +93,8 @@ public class ProfileDisplay extends AppCompatActivity implements LoadImageTask.L
         email.setText("Email: " + users.get(toShow).getEmail());
         mImageView = (ImageView) findViewById(R.id.image);
         matchingBtn = (Button) findViewById(R.id.startMatching);
-        yesBtn = (Button) findViewById(R.id.yesBtn);
-        noBtn = (Button) findViewById(R.id.noBtn);
+        yesBtn = (ImageView) findViewById(R.id.yesBtn);
+        noBtn = (ImageView) findViewById(R.id.noBtn);
         editBtn = (Button) findViewById(R.id.editBtn);
 
         if (toShow == currentUser) {
@@ -117,12 +117,13 @@ public class ProfileDisplay extends AppCompatActivity implements LoadImageTask.L
                     //Map<Integer, Integer> sortedMap = sortHashMapByValues(comparisons);
                     //Map.Entry<Integer, Integer> entry = sortedMap.entrySet().iterator().next();
 
-/*
+                    /*
                     while (entry.getKey() == currentUser) {
                         sortedMap.remove(entry);
                         entry = sortedMap.entrySet().iterator().next();
                     }
-*/
+                    */
+
                     triggered();
                 }
             });

@@ -11,6 +11,15 @@
     tools:context="com.example.outsidehacks17.outsidehacks.ProfileDisplay"
     android:weightSum="1">
 
+    <ImageView
+        android:id="@+id/image"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="50dp"
+        android:layout_marginRight="50dp"
+        android:layout_marginTop="30dp"
+        android:contentDescription="@string/profile_picture" />
+
     <Button
         android:id="@+id/editBtn"
         android:layout_width="150dp"
@@ -58,52 +67,23 @@
         android:layout_marginTop="0dp"
         android:textSize="20sp" />
 
-    <Button
-        android:id="@+id/yesBtn"
-        android:layout_width="45dp"
-        android:layout_height="45dp"
-        android:layout_marginLeft="80dp"
-        android:layout_marginStart="80dp"
-        android:layout_marginTop="-50dp"
-        android:background="#31f50a"
-        android:visibility="invisible" />
-
     <ImageView
-        android:id="@+id/imageView8"
-        android:layout_width="match_parent"
-        android:layout_height="57dp"
+        android:id="@+id/yesBtn"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
         android:layout_marginLeft="80dp"
         android:layout_marginStart="80dp"
-        android:layout_marginTop="-55dp"
-        android:layout_weight="0.03"
+        android:layout_marginTop="30dp"
         app:srcCompat="@drawable/dave" />
 
     <ImageView
-        android:id="@+id/imageView11"
-        android:layout_width="90dp"
-        android:layout_height="70dp"
-        android:layout_marginLeft="-80dp"
-        android:layout_marginStart="-80dp"
-        android:layout_marginTop="-69dp"
-        app:srcCompat="@drawable/thumbssssdown" />
-
-    <Button
         android:id="@+id/noBtn"
-        android:layout_width="65dp"
-        android:layout_height="75dp"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
         android:layout_marginLeft="-80dp"
         android:layout_marginStart="-80dp"
-        android:layout_marginTop="-90dp"
-        android:visibility="invisible"/>
-
-    <ImageView
-        android:id="@+id/image"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="50dp"
-        android:layout_marginRight="50dp"
-        android:layout_marginTop="30dp"
-        android:contentDescription="@string/profile_picture" />
+        android:layout_marginTop="-50dp"
+        app:srcCompat="@drawable/thumbssssdown"/>
 
 
 </LinearLayout>
