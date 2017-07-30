@@ -27,12 +27,13 @@
             </intent-filter>
         </activity>
         <activity
+            android:name=".RegisterScreen"
+            android:theme="@style/Theme.AppCompat.DayNight"
+            android:screenOrientation="sensorPortrait"/>
+        <activity
             android:name=".ArtistsActivity"
             android:label="@string/title_activity_artists"
             android:theme="@style/AppTheme.NoActionBar" />
-        <activity
-            android:name=".RegisterScreen"
-            android:screenOrientation="sensorPortrait" />
         <activity
             android:name=".LoginScreen"
             android:screenOrientation="sensorPortrait" />
