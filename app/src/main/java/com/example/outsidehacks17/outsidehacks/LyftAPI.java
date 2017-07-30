@@ -87,7 +87,18 @@ public class LyftAPI extends FragmentActivity implements OnMapReadyCallback {
                     }
                     if (list != null && list.size() > 0) {
                         Address address = list.get(0);
-                        addressText.setText(address.toString());
+                        String addstring = "";
+                        if (address.getThoroughfare() != null ) {
+                            addstring += address.getThoroughfare();
+                        }
+                        addressText.setText(addstring);
+                        RideParams.Builder rideParamsBuilder = new RideParams.Builder()
+                                .setPickupLocation(address.getLatitude(), address.getLongitude());
+                        rideParamsBuilder.setDropoffLocation(37.766521, -122.494656);
+                        rideParamsBuilder.setRideTypeEnum(RideTypeEnum.CLASSIC);
+                        LyftButton lyftButton = (LyftButton) findViewById(R.id.lyft_button);
+                        lyftButton.setRideParams(rideParamsBuilder.build());
+                        lyftButton.load();
                     }
                     else
                     {
