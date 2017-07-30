@@ -4,7 +4,7 @@ import android.os.Parcel
 import android.os.Parcelable
 import java.util.ArrayList
 
-class User(var id: Int, var name: String, var birthYear: Int, var email: String, private var password: String) : Parcelable {
+class User : Parcelable {
     override fun writeToParcel(parcel: Parcel?, p1: Int) {
         parcel!!.writeInt(id)
         parcel.writeString(name)
@@ -17,12 +17,18 @@ class User(var id: Int, var name: String, var birthYear: Int, var email: String,
         parcel.writeString(image)
         parcel.writeStringList(toDo)
         parcel.writeList(matched)
+        parcel.writeList(labelled)
     }
 
     override fun describeContents(): Int {
         return 0
     }
 
+    var id: Int = 0
+    var name: String = ""
+    var birthYear: Int = 0
+    var email: String = ""
+    private var password: String = ""
     var favArtists1: String = ""
     var favArtists2: String = ""
     var favArtists3: String = ""
@@ -30,6 +36,16 @@ class User(var id: Int, var name: String, var birthYear: Int, var email: String,
     var toDo = ArrayList<String>()
     var events = BooleanArray(8)
     var matched = ArrayList<Int>()
+    var labelled = ArrayList<Int>()
+
+    constructor(id: Int, name: String, birthYear: Int, email: String, password: String) {
+        this.id = id
+        this.name = name
+        this.birthYear = birthYear
+        this.email = email
+        this.password = password
+        labelled.add(id)
+    }
 
     constructor(parcel: Parcel) : this(
             parcel.readInt(),
@@ -43,6 +59,7 @@ class User(var id: Int, var name: String, var birthYear: Int, var email: String,
         image = parcel.readString()
         parcel.readStringList(toDo)
         parcel.readList(matched, ArrayList<Int>().javaClass.classLoader)
+        parcel.readList(labelled, ArrayList<Int>().javaClass.classLoader)
     }
 
 
@@ -60,17 +77,19 @@ class User(var id: Int, var name: String, var birthYear: Int, var email: String,
         }
     }
 
-    fun compatibility(users: UserFactory): Map<Int, Int> {
-        var comparables = HashMap<Int, Int>()
+    fun compatibility(users: UserFactory): User {
+        val comparables = HashMap<Int, Int>()
 
-        for (i in 0..users.size()) {
-            var user = users.location(i)
-            var toCompare = 0
-            for (j in 0..events.size) {
-                if (user.events[j] == true && user.events[j] == events[j]) {
-                    toCompare++
-                }
+        for (i in 0..users.size() - 1) {
+            val user = users.location(i)
+
+            val existed = labelled.any { it == user.id }
+
+            if (existed) {
+                break
             }
+
+            var toCompare = (0..events.size - 1).count { user.events[it] && user.events[it] == events[it] }
 
             if (user.favArtists1 == favArtists1 || user.favArtists2 == favArtists1 || user.favArtists3 == favArtists1) {
                 toCompare+=5
@@ -87,6 +106,14 @@ class User(var id: Int, var name: String, var birthYear: Int, var email: String,
             comparables.put(i, toCompare)
         }
 
-        return comparables
+        comparables.toList().sortedBy { (_, value) -> value }.toMap()
+
+        if (comparables.isEmpty()) {
+            throw NullPointerException();
+        }
+
+        val next: Int = comparables.iterator().next().key
+        labelled.add(next)
+        return(users.get(next))
     }
 }
