@@ -1,18 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.outsidehacks17.outsidehacks">
-
-    <!-- To auto-complete the email text field in the login form with the user's emails -->
-    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
-    <uses-permission android:name="android.permission.READ_PROFILE" />
-    <uses-permission android:name="android.permission.READ_CONTACTS" />
-    <uses-permission android:name="android.permission.INTERNET" />
-
-    <uses-feature
-        android:name="android.hardware.camera2"
-        android:required="true" />
-
-    <uses-permission android:name="android.permission.CAMERA" />
+    package="meetoutside.meetoutsidev2">
 
     <application
         android:allowBackup="true"
@@ -28,47 +16,8 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity
-            android:name=".RegisterScreen"
-            android:screenOrientation="sensorPortrait"
-            android:theme="@style/Theme.AppCompat.DayNight" />
-        <activity
-            android:name=".ArtistsActivity"
-            android:label="@string/title_activity_artists"
-            android:screenOrientation="sensorPortrait"
-            android:theme="@style/AppTheme.NoActionBar" />
-        <activity
-            android:name=".LoginScreen"
-            android:screenOrientation="sensorPortrait" />
-        <activity
-            android:name=".ProfileDisplay"
-            android:label="@string/title_activity_profile_display"
-            android:screenOrientation="sensorPortrait" />
-        <activity
-            android:name=".ChooseEventsActivity"
-            android:allowBackup="true"
-            android:icon="@mipmap/ic_launcher"
-            android:label="@string/title_activity_create_profile"
-            android:roundIcon="@mipmap/ic_launcher_round"
-            android:screenOrientation="sensorPortrait"
-            android:supportsRtl="true"
-            android:theme="@style/AppTheme.NoActionBar" />
-        <activity
-            android:name=".LyftAPI"
-            android:label="@string/title_activity_lyft_api"
-            android:screenOrientation="sensorPortrait"
-            android:theme="@style/AppTheme.NoActionBar" />
-        <activity
-            android:name=".EditProfile"
-            android:screenOrientation="sensorPortrait" />
-        <meta-data
-            android:name="com.google.android.geo.API_KEY"
-            android:value="AIzaSyB4tXHE1N4yWNfMPyi0yReZqQtInOjBl0I" />
-        <meta-data
-            android:name="com.google.android.gms.version"
-            android:value="@integer/google_play_services_version" />
-
-        <activity android:name=".MatchedProfiles"></activity>
+        <activity android:name=".SignInActivity" />
+        <activity android:name=".EditUser"></activity>
     </application>
 
 </manifest>

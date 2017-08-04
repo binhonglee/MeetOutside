@@ -1,4 +1,4 @@
-package com.example.outsidehacks17.outsidehacks;
+package meetoutside.meetoutsidev2;
 
 import org.junit.Test;
 

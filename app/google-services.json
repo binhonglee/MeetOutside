@@ -1,0 +1,130 @@
+{
+  "project_info": {
+    "project_number": "718267899046",
+    "firebase_url": "https://meetoutside-ff99a.firebaseio.com",
+    "project_id": "meetoutside-ff99a",
+    "storage_bucket": "meetoutside-ff99a.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:718267899046:android:02885c65f8c2960a",
+        "android_client_info": {
+          "package_name": "com.example.outsidehacks17.outsidehacks"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "718267899046-u3s3gqlff4g1i1cv7puovttea6meomdt.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.outsidehacks17.outsidehacks",
+            "certificate_hash": "4e1f41abe113dd53702f7d158d6644fe63484750"
+          }
+        },
+        {
+          "client_id": "718267899046-42osk5bmti7p50h24pidhrrdcbdkm7mt.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAEUTWqACjTmE8Bk2nC2OmK9h51l6NupH8"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "718267899046-42osk5bmti7p50h24pidhrrdcbdkm7mt.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:718267899046:android:512befd95948f435",
+        "android_client_info": {
+          "package_name": "com.example.meetoutside.meetOutsideV2"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "718267899046-42osk5bmti7p50h24pidhrrdcbdkm7mt.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAEUTWqACjTmE8Bk2nC2OmK9h51l6NupH8"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:718267899046:android:8acdb4d3241d6907",
+        "android_client_info": {
+          "package_name": "meetoutside.meetoutsidev2"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "718267899046-6agpu00i2cokqeqmpefpochfr40l4bac.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "meetoutside.meetoutsidev2",
+            "certificate_hash": "4e1f41abe113dd53702f7d158d6644fe63484750"
+          }
+        },
+        {
+          "client_id": "718267899046-42osk5bmti7p50h24pidhrrdcbdkm7mt.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAEUTWqACjTmE8Bk2nC2OmK9h51l6NupH8"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "718267899046-42osk5bmti7p50h24pidhrrdcbdkm7mt.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:layout_margin="20dp"
+    tools:context="meetoutside.meetoutsidev2.SignInActivity">
+
+    <LinearLayout
+        android:id="@+id/login_pre_login"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <EditText
+            android:layout_marginTop="150dp"
+            android:id="@+id/login_email_pre_login"
+            android:layout_width="match_parent"
+            android:hint="@string/prompt_email"
+            android:layout_height="50dp"
+            android:inputType="textEmailAddress" />
+
+        <EditText
+            android:id="@+id/login_password_pre_login"
+            android:hint="@string/prompt_password"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:inputType="textPassword" />
+
+        <Button
+            android:id="@+id/login_signin_pre_login"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:text="@string/action_sign_in_short"/>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:text="@string/register"
+            android:id="@+id/login_signup_pre_login"/>
+
+        <TextView
+            android:layout_marginTop="30dp"
+            android:layout_height="30dp"
+            android:layout_width="match_parent"
+            android:textAlignment="center"
+            android:id="@+id/login_status_pre_login"
+            android:text="@string/signed_out" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:id="@+id/login_post_login"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:layout_marginTop="150dp"
+            android:id="@+id/login_email_post_login"
+            android:layout_width="match_parent"
+            android:layout_height="50dp" />
+
+        <Button
+            android:id="@+id/login_signout_post_login"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="20dp"
+            android:text="@string/sign_out" />
+
+        <Button
+            android:id="@+id/login_edit_profile"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="20dp"
+            android:text="@string/edit_profile" />
+    </LinearLayout>
+
+</LinearLayout>
