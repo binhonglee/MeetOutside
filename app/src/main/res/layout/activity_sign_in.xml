@@ -14,8 +14,17 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
+        <TextView
+            android:id="@+id/login_status"
+            android:layout_marginTop="50dp"
+            android:layout_width="match_parent"
+            android:gravity="center"
+            android:layout_height="50dp"
+            android:textSize="40sp"
+            android:text="@string/action_sign_in_short"/>
+
         <EditText
-            android:layout_marginTop="150dp"
+            android:layout_marginTop="30dp"
             android:id="@+id/login_email_pre_login"
             android:layout_width="match_parent"
             android:hint="@string/prompt_email"
@@ -27,6 +36,14 @@
             android:hint="@string/prompt_password"
             android:layout_width="match_parent"
             android:layout_height="50dp"
+            android:inputType="textPassword" />
+
+        <EditText
+            android:id="@+id/login_confirm_password_pre_login"
+            android:hint="@string/confirm_password_no_colon"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:visibility="gone"
             android:inputType="textPassword" />
 
         <Button

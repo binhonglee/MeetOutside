@@ -25,7 +25,9 @@ class SignInActivity : AppCompatActivity() {
     private var mAuthListener: FirebaseAuth.AuthStateListener? = null
     private var usernameTxtField: EditText? = null
     private var passwordTxtField: EditText? = null
+    private var confirmPasswordTxtField: EditText? = null
     private var statusTxtView: TextView? = null
+    private var loginStatusTxtView: TextView? = null
     private var emailPostLoginTxtView: TextView? = null
     private var signInBtn: Button? = null
     private var registerBtn: Button? = null
@@ -44,8 +46,10 @@ class SignInActivity : AppCompatActivity() {
 
         usernameTxtField = findViewById(R.id.login_email_pre_login) as EditText
         passwordTxtField = findViewById(R.id.login_password_pre_login) as EditText
+        confirmPasswordTxtField = findViewById(R.id.login_confirm_password_pre_login) as EditText
         signInBtn = findViewById(R.id.login_signin_pre_login) as Button
         statusTxtView = findViewById(R.id.login_status_pre_login) as TextView
+        loginStatusTxtView = findViewById(R.id.login_status) as TextView
         signInBtn = findViewById(R.id.login_signin_pre_login) as Button
         registerBtn = findViewById(R.id.login_signup_pre_login) as Button
 
@@ -53,8 +57,24 @@ class SignInActivity : AppCompatActivity() {
         signOutBtn = findViewById(R.id.login_signout_post_login) as Button
         editProfileBtn = findViewById(R.id.login_edit_profile) as Button
 
-        signInBtn!!.setOnClickListener { signIn(usernameTxtField!!.text.toString(), passwordTxtField!!.text.toString()) }
-        registerBtn!!.setOnClickListener { createAccount(usernameTxtField!!.text.toString(), passwordTxtField!!.text.toString()) }
+        signInBtn!!.setOnClickListener {
+            if (confirmPasswordTxtField!!.visibility == View.GONE) {
+                signIn(usernameTxtField!!.text.toString(), passwordTxtField!!.text.toString())
+            } else {
+                loginStatusTxtView!!.text = getString(R.string.action_sign_in_short)
+                confirmPasswordTxtField!!.visibility = View.GONE
+            }
+        }
+
+        registerBtn!!.setOnClickListener {
+            if (confirmPasswordTxtField!!.visibility == View.VISIBLE) {
+                createAccount(usernameTxtField!!.text.toString(), passwordTxtField!!.text.toString())
+            } else {
+                loginStatusTxtView!!.text = getString(R.string.register)
+                confirmPasswordTxtField!!.visibility = View.VISIBLE
+            }
+
+        }
 
         signOutBtn!!.setOnClickListener { signOut() }
 

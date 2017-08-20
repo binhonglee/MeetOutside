@@ -16,7 +16,7 @@
             android:id="@+id/edit_userTxtView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textSize="23sp"
+            android:textSize="20sp"
             android:text="@string/get_email"/>
 
         <EditText
@@ -24,7 +24,7 @@
             android:layout_marginTop="-10dp"
             android:layout_toEndOf="@id/edit_userTxtView"
             android:layout_toRightOf="@id/edit_userTxtView"
-            android:textSize="23sp"
+            android:textSize="20sp"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:inputType="textWebEmailAddress" />
@@ -35,7 +35,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
             android:layout_below="@id/edit_userTxtView"
-            android:textSize="23sp"
+            android:textSize="20sp"
             android:text="@string/display_name"/>
 
         <EditText
@@ -44,7 +44,7 @@
             android:layout_toEndOf="@id/edit_nameTxtView"
             android:layout_toRightOf="@id/edit_nameTxtView"
             android:layout_alignTop="@id/edit_nameTxtView"
-            android:textSize="23sp"
+            android:textSize="20sp"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:inputType="text" />

@@ -16,4 +16,5 @@
     <string name="new_password">New password:</string>
     <string name="current_password">Current password:</string>
     <string name="get_email">Email:</string>
+    <string name="confirm_password_no_colon">Confirm password</string>
 </resources>
