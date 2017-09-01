@@ -41,21 +41,21 @@ class SignInActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_sign_in)
 
-        preLogin = findViewById(R.id.login_pre_login) as LinearLayout
-        postLogin = findViewById(R.id.login_post_login) as LinearLayout
+        preLogin = findViewById<LinearLayout>(R.id.login_pre_login)
+        postLogin = findViewById<LinearLayout>(R.id.login_post_login)
 
-        usernameTxtField = findViewById(R.id.login_email_pre_login) as EditText
-        passwordTxtField = findViewById(R.id.login_password_pre_login) as EditText
-        confirmPasswordTxtField = findViewById(R.id.login_confirm_password_pre_login) as EditText
-        signInBtn = findViewById(R.id.login_signin_pre_login) as Button
-        statusTxtView = findViewById(R.id.login_status_pre_login) as TextView
-        loginStatusTxtView = findViewById(R.id.login_status) as TextView
-        signInBtn = findViewById(R.id.login_signin_pre_login) as Button
-        registerBtn = findViewById(R.id.login_signup_pre_login) as Button
+        usernameTxtField = findViewById<EditText>(R.id.login_email_pre_login)
+        passwordTxtField = findViewById<EditText>(R.id.login_password_pre_login)
+        confirmPasswordTxtField = findViewById<EditText>(R.id.login_confirm_password_pre_login) as EditText
+        signInBtn = findViewById<Button>(R.id.login_signin_pre_login) as Button
+        statusTxtView = findViewById<TextView>(R.id.login_status_pre_login) as TextView
+        loginStatusTxtView = findViewById<TextView>(R.id.login_status) as TextView
+        signInBtn = findViewById<Button>(R.id.login_signin_pre_login) as Button
+        registerBtn = findViewById<Button>(R.id.login_signup_pre_login) as Button
 
-        emailPostLoginTxtView = findViewById(R.id.login_email_post_login) as TextView
-        signOutBtn = findViewById(R.id.login_signout_post_login) as Button
-        editProfileBtn = findViewById(R.id.login_edit_profile) as Button
+        emailPostLoginTxtView = findViewById<TextView>(R.id.login_email_post_login) as TextView
+        signOutBtn = findViewById<Button>(R.id.login_signout_post_login) as Button
+        editProfileBtn = findViewById<Button>(R.id.login_edit_profile) as Button
 
         signInBtn!!.setOnClickListener {
             if (confirmPasswordTxtField!!.visibility == View.GONE) {

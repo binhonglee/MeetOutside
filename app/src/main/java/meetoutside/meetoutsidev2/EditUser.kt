@@ -27,12 +27,12 @@ class EditUser : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_edit_user)
 
-        email = findViewById(R.id.edit_userEditTxt) as EditText
-        displayName = findViewById(R.id.edit_nameEditTxt) as EditText
-        currentPassword = findViewById(R.id.edit_currentPasswordEditTxt) as EditText
-        newPassword = findViewById(R.id.edit_newPasswordEditTxt) as EditText
-        newPasswordConfirm = findViewById(R.id.edit_confirmNewPasswordEditTxt) as EditText
-        saveBtn = findViewById(R.id.edit_saveBtn) as Button
+        email = findViewById<EditText>(R.id.edit_userEditTxt)
+        displayName = findViewById<EditText>(R.id.edit_nameEditTxt) as EditText
+        currentPassword = findViewById<EditText>(R.id.edit_currentPasswordEditTxt) as EditText
+        newPassword = findViewById<EditText>(R.id.edit_newPasswordEditTxt) as EditText
+        newPasswordConfirm = findViewById<EditText>(R.id.edit_confirmNewPasswordEditTxt) as EditText
+        saveBtn = findViewById<Button>(R.id.edit_saveBtn) as Button
 
         saveBtn!!.setOnClickListener {
             save()
