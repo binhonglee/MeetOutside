@@ -2,6 +2,8 @@
 
 An app that connects users with other users who are going to the same music festival and share same or similar music interest.
 
+[![Stories in Ready](https://badge.waffle.io/binhonglee/MeetOutside.svg?label=ready&title=Ready)](http://waffle.io/binhonglee/MeetOutside)
+
 | Branch | Status |
 |:------:|:------:|
 | [master](https://github.com/binhonglee/MeetOutside/) | [![Build Status](https://travis-ci.org/binhonglee/MeetOutside.svg?branch=master)](https://travis-ci.org/binhonglee/MeetOutside) |
