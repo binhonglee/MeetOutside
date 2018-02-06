@@ -202,7 +202,7 @@ class SignInActivity : AppCompatActivity() {
 
     var mProgressDialog: ProgressDialog? = null
 
-    fun showProgressDialog() {
+    private fun showProgressDialog() {
         if (mProgressDialog == null) {
             mProgressDialog = ProgressDialog(this)
             mProgressDialog!!.setMessage(getString(R.string.loading))
@@ -212,7 +212,7 @@ class SignInActivity : AppCompatActivity() {
         mProgressDialog!!.show()
     }
 
-    fun hideProgressDialog() {
+    private fun hideProgressDialog() {
         if (mProgressDialog != null && mProgressDialog!!.isShowing) {
             mProgressDialog!!.dismiss()
         }
